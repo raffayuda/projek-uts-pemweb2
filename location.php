@@ -1,3 +1,8 @@
+<?php 
+require 'auth/config.php';
+$data_location = mysqli_query($conn, "SELECT * FROM lokasi_pengambilan")
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +15,9 @@
     <div class="min-h-screen bg-gradient-to-b from-[#1A1F2C] to-[#2E2A4A] text-white">
         <!-- Header/Navbar -->
         <?php include 'components/navbar.php'; ?>
+        <?php foreach ($data_location as $key => $value) {
+          echo var_dump($data_location);
+        }?>
 
         <!-- Location Hero Section -->
         <section class="py-12 md:py-20 relative">
