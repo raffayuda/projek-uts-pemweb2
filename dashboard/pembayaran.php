@@ -138,7 +138,7 @@ include '../auth/config.php';
                     <table id="pembayaranTable" class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>ID</th>
+                          <th>#</th>
                           <th>Nama Peminjam</th>
                           <th>Total Biaya</th>
                           <th>Total Dibayar</th>
@@ -187,7 +187,7 @@ include '../auth/config.php';
                                 }
                                 
                                 echo "<tr>";
-                                echo "<td>" . $row['id'] . "</td>";
+                                echo "<td>" . $no++ . "</td>";
                                 echo "<td>" . $row['nama_peminjam'] . "</td>";
                                 echo "<td>Rp " . number_format($row['total_biaya'], 0, ',', '.') . "</td>";
                                 echo "<td>Rp " . number_format($row['total_dibayar'], 0, ',', '.') . "</td>";

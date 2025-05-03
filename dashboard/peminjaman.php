@@ -156,7 +156,7 @@ include '../auth/config.php';
                     <table id="peminjamanTable" class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>ID</th>
+                          <th>#</th>
                           <th>Nama Peminjam</th>
                           <th>Armada</th>
                           <th>Tanggal Mulai</th>
@@ -173,6 +173,7 @@ include '../auth/config.php';
                                   LEFT JOIN armada a ON p.armada_id = a.id 
                                   ORDER BY p.id DESC";
                         $result = $conn->query($query);
+                        $no = 1;
 
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
@@ -196,7 +197,7 @@ include '../auth/config.php';
                                 }
                                 
                                 echo "<tr>";
-                                echo "<td>" . $row['id'] . "</td>";
+                                echo "<td>" . $no++ . "</td>";
                                 echo "<td>" . $row['nama_peminjam'] . "</td>";
                                 echo "<td>" . $row['armada_merk'] . " (" . $row['armada_nopol'] . ")</td>";
                                 echo "<td>" . date('d M Y', strtotime($row['mulai'])) . "</td>";

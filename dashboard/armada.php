@@ -145,11 +145,12 @@ include '../auth/config.php';
                                   LEFT JOIN jenis_kendaraan j ON a.jenis_kendaraan_id = j.id 
                                   ORDER BY a.id DESC";
                         $result = $conn->query($query);
+                        $no = 1;
 
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                                 echo "<tr>";
-                                echo "<td>" . $row['id'] . "</td>";
+                                echo "<td>" . $no++ . "</td>";
                                 echo "<td><img src='uploads/armada/" . $row['gambar'] . "' class='img-preview' alt='" . $row['merk'] . "'></td>";
                                 echo "<td>" . $row['merk'] . "</td>";
                                 echo "<td>" . $row['nopol'] . "</td>";

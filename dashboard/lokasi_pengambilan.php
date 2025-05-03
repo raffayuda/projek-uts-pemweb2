@@ -125,7 +125,7 @@ include '../auth/config.php';
                     <table id="lokasiTable" class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>ID</th>
+                          <th>#</th>
                           <th>Nama Lokasi</th>
                           <th>Jumlah Peminjaman</th>
                           <th>Aksi</th>
@@ -139,11 +139,12 @@ include '../auth/config.php';
                                   GROUP BY l.id 
                                   ORDER BY l.id";
                         $result = $conn->query($query);
+                        $no = 1;
 
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                                 echo "<tr>";
-                                echo "<td>" . $row['id'] . "</td>";
+                                echo "<td>" . $no++ . "</td>";
                                 echo "<td>" . $row['nama'] . "</td>";
                                 echo "<td>" . $row['jumlah_peminjaman'] . " peminjaman</td>";
                                 echo "<td>

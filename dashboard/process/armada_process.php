@@ -302,9 +302,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['action']) && $_GET['acti
         echo "<div class='row'>";
         echo "<div class='col-md-6'>";
         // Tampilkan gambar dengan path yang direkonstruksi
-        echo "<img src='../uploads/armada/" . $row['gambar'] . "' class='img-fluid rounded mb-3' alt='" . $row['merk'] . "'>";
+        echo "<img src='uploads/armada/" . $row['gambar'] . "' class='img-fluid rounded mb-3' alt='" . $row['merk'] . "'>";
         echo "</div>";
-        echo "<div class='col-md-6'>";
+        echo "<div class='col-md-6'>";  
         echo "<h4>" . $row['merk'] . "</h4>";
         echo "<p class='text-muted'>" . $row['nopol'] . " | " . $row['jenis_nama'] . "</p>";
         echo "<p><strong>Tahun Pembelian:</strong> " . $row['thn_beli'] . "</p>";

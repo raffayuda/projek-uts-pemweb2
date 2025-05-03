@@ -125,7 +125,7 @@ include '../auth/config.php';
                     <table id="jenisTable" class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>ID</th>
+                          <th>#</th>
                           <th>Nama Jenis</th>
                           <th>Jumlah Armada</th>
                           <th>Aksi</th>
@@ -139,11 +139,12 @@ include '../auth/config.php';
                                   GROUP BY j.id 
                                   ORDER BY j.id";
                         $result = $conn->query($query);
+                        $no = 1;
 
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                                 echo "<tr>";
-                                echo "<td>" . $row['id'] . "</td>";
+                                echo "<td>" . $no++ . "</td>";
                                 echo "<td>" . $row['nama'] . "</td>";
                                 echo "<td>" . $row['jumlah_armada'] . " kendaraan</td>";
                                 echo "<td>
