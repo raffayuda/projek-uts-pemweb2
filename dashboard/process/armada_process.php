@@ -18,6 +18,46 @@ function clean_input($data) {
     return $conn->real_escape_string($data);
 }
 
+// Fungsi untuk mengunggah file gambar
+function upload_image() {
+    $target_dir = "../uploads/armada/";
+    
+    // Buat direktori jika belum ada
+    if (!file_exists($target_dir)) {
+        mkdir($target_dir, 0777, true);
+    }
+    
+    $file_name = basename($_FILES["gambar"]["name"]);
+    $new_file_name = time() . '_' . $file_name; // Nama file dengan timestamp
+    $target_file = $target_dir . $new_file_name;
+    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+    $upload_ok = 1;
+    
+    // Cek apakah file benar-benar gambar
+    $check = getimagesize($_FILES["gambar"]["tmp_name"]);
+    if ($check === false) {
+        return ["status" => false, "message" => "File bukan gambar."];
+    }
+    
+    // Cek ukuran file (max 2MB)
+    if ($_FILES["gambar"]["size"] > 2000000) {
+        return ["status" => false, "message" => "Ukuran file terlalu besar (max 2MB)."];
+    }
+    
+    // Cek tipe file yang diizinkan
+    if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg") {
+        return ["status" => false, "message" => "Hanya file JPG, JPEG, & PNG yang diizinkan."];
+    }
+    
+    // Upload file
+    if (move_uploaded_file($_FILES["gambar"]["tmp_name"], $target_file)) {
+        // Hanya kembalikan nama file, bukan path lengkap
+        return ["status" => true, "file_path" => $new_file_name];
+    } else {
+        return ["status" => false, "message" => "Terjadi kesalahan saat mengunggah file."];
+    }
+}
+
 // Proses tambah data armada
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['action'] == 'add') {
     $merk = clean_input($_POST['merk']);
@@ -28,10 +68,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
     $kapasitas_kursi = clean_input($_POST['kapasitas_kursi']);
     $rating = clean_input($_POST['rating']);
     $harga = clean_input($_POST['harga']);
-    $gambar = clean_input($_POST['gambar']);
+    
+    // Upload gambar
+    if (isset($_FILES['gambar']) && $_FILES['gambar']['error'] == 0) {
+        $upload_result = upload_image();
+        if (!$upload_result["status"]) {
+            header("Location: ../armada.php?status=error&message=" . $upload_result["message"]);
+            exit();
+        }
+        $gambar_path = $upload_result["file_path"]; // Sekarang hanya nama file
+    } else {
+        header("Location: ../armada.php?status=error&message=Gambar wajib diunggah");
+        exit();
+    }
 
     $query = "INSERT INTO armada (merk, nopol, thn_beli, deskripsi, jenis_kendaraan_id, kapasitas_kursi, rating, harga, gambar) 
-              VALUES ('$merk', '$nopol', $thn_beli, '$deskripsi', $jenis_kendaraan_id, $kapasitas_kursi, $rating, $harga, '$gambar')";
+              VALUES ('$merk', '$nopol', $thn_beli, '$deskripsi', $jenis_kendaraan_id, $kapasitas_kursi, $rating, $harga, '$gambar_path')";
 
     if ($conn->query($query) === TRUE) {
         header("Location: ../armada.php?status=success&message=Data armada berhasil ditambahkan");
@@ -52,19 +104,55 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
     $kapasitas_kursi = clean_input($_POST['kapasitas_kursi']);
     $rating = clean_input($_POST['rating']);
     $harga = clean_input($_POST['harga']);
-    $gambar = clean_input($_POST['gambar']);
-
-    $query = "UPDATE armada SET 
-              merk = '$merk', 
-              nopol = '$nopol', 
-              thn_beli = $thn_beli, 
-              deskripsi = '$deskripsi', 
-              jenis_kendaraan_id = $jenis_kendaraan_id, 
-              kapasitas_kursi = $kapasitas_kursi, 
-              rating = $rating, 
-              harga = $harga, 
-              gambar = '$gambar' 
-              WHERE id = $id";
+    
+    // Cek apakah ada file gambar baru yang diunggah
+    if (isset($_FILES['gambar']) && $_FILES['gambar']['error'] == 0) {
+        $upload_result = upload_image();
+        if (!$upload_result["status"]) {
+            header("Location: ../armada.php?status=error&message=" . $upload_result["message"]);
+            exit();
+        }
+        $gambar_path = $upload_result["file_path"]; // Sekarang hanya nama file
+        
+        // Hapus gambar lama jika ada
+        $query_get_old = "SELECT gambar FROM armada WHERE id = $id";
+        $result_old = $conn->query($query_get_old);
+        if ($result_old->num_rows > 0) {
+            $row_old = $result_old->fetch_assoc();
+            $old_image = $row_old['gambar'];
+            // Jika nama file ada dan bukan path
+            if (!empty($old_image)) {
+                $old_image_path = "../uploads/armada/" . $old_image;
+                if (file_exists($old_image_path)) {
+                    @unlink($old_image_path);
+                }
+            }
+        }
+        
+        $query = "UPDATE armada SET 
+                  merk = '$merk', 
+                  nopol = '$nopol', 
+                  thn_beli = $thn_beli, 
+                  deskripsi = '$deskripsi', 
+                  jenis_kendaraan_id = $jenis_kendaraan_id, 
+                  kapasitas_kursi = $kapasitas_kursi, 
+                  rating = $rating, 
+                  harga = $harga, 
+                  gambar = '$gambar_path' 
+                  WHERE id = $id";
+    } else {
+        // Tidak ada file gambar baru
+        $query = "UPDATE armada SET 
+                  merk = '$merk', 
+                  nopol = '$nopol', 
+                  thn_beli = $thn_beli, 
+                  deskripsi = '$deskripsi', 
+                  jenis_kendaraan_id = $jenis_kendaraan_id, 
+                  kapasitas_kursi = $kapasitas_kursi, 
+                  rating = $rating, 
+                  harga = $harga 
+                  WHERE id = $id";
+    }
 
     if ($conn->query($query) === TRUE) {
         header("Location: ../armada.php?status=success&message=Data armada berhasil diperbarui");
@@ -86,6 +174,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
     if ($check_data['count'] > 0) {
         header("Location: ../armada.php?status=error&message=Tidak dapat menghapus armada karena sedang digunakan dalam peminjaman");
         exit();
+    }
+    
+    // Ambil informasi gambar untuk dihapus
+    $query_get_image = "SELECT gambar FROM armada WHERE id = $id";
+    $result_image = $conn->query($query_get_image);
+    if ($result_image->num_rows > 0) {
+        $row_image = $result_image->fetch_assoc();
+        $image_name = $row_image['gambar'];
+        // Hapus file gambar jika ada
+        if (!empty($image_name)) {
+            $image_path = "../uploads/armada/" . $image_name;
+            if (file_exists($image_path)) {
+                @unlink($image_path);
+            }
+        }
     }
 
     $query = "DELETE FROM armada WHERE id = $id";
@@ -161,9 +264,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['action']) && $_GET['acti
         echo "<input type='number' class='form-control' id='harga' name='harga' value='" . $row['harga'] . "' required />";
         echo "</div>";
         echo "<div class='col-md-6 mb-3'>";
-        echo "<label for='gambar' class='form-label'>URL Gambar</label>";
-        echo "<input type='text' class='form-control' id='gambar' name='gambar' value='" . $row['gambar'] . "' required />";
-        echo "<div class='mt-2'><img src='" . $row['gambar'] . "' class='img-preview' alt='Preview'></div>";
+        echo "<label for='gambar' class='form-label'>Gambar</label>";
+        echo "<input type='file' class='form-control' id='gambar' name='gambar' accept='image/*'>";
+        echo "<small class='text-muted'>Format yang diizinkan: JPG, JPEG, PNG. Max: 2MB</small>";
+        // Tampilkan gambar dengan path yang direkonstruksi
+        echo "<div class='mt-2'><img src='../uploads/armada/" . $row['gambar'] . "' class='img-preview' alt='Preview'></div>";
+        echo "<small class='text-muted'>Biarkan kosong jika tidak ingin mengubah gambar</small>";
         echo "</div>";
         echo "</div>";
         
@@ -195,7 +301,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['action']) && $_GET['acti
         
         echo "<div class='row'>";
         echo "<div class='col-md-6'>";
-        echo "<img src='" . $row['gambar'] . "' class='img-fluid rounded mb-3' alt='" . $row['merk'] . "'>";
+        // Tampilkan gambar dengan path yang direkonstruksi
+        echo "<img src='../uploads/armada/" . $row['gambar'] . "' class='img-fluid rounded mb-3' alt='" . $row['merk'] . "'>";
         echo "</div>";
         echo "<div class='col-md-6'>";
         echo "<h4>" . $row['merk'] . "</h4>";

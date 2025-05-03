@@ -1,23 +1,21 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>DriveEasy - Sewa Mobil Premium</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
 </head>
 
 <body>
   <div class="min-h-screen bg-gradient-to-b from-[#1A1F2C] to-[#2E2A4A] text-white">
-    <!-- {/* Header/Navbar */} -->
+    <!-- Header/Navbar -->
     <?php include 'components/navbar.php'; ?>
 
-   <!-- Hero Section -->
-   <section class="py-12 md:pt-34 md:py-20 relative pt-28">
+    <!-- Hero Section -->
+    <section class="py-12 md:pt-34 md:py-20 relative pt-28">
       <div class="container mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="space-y-6">
@@ -39,8 +37,8 @@
       <div class="absolute bottom-0 left-10 w-72 h-72 bg-blue-600 rounded-full filter blur-3xl opacity-10"></div>
     </section>
 
-     <!-- Featured Vehicles Section -->
-     <section class="py-16 bg-gray-900 bg-opacity-30" id="vehicles">
+    <!-- Featured Vehicles Section -->
+    <section class="py-16 bg-gray-900 bg-opacity-30" id="vehicles">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold">Kendaraan Unggulan</h2>
@@ -52,7 +50,7 @@
           <div class="vehicle-card bg-gray-800 bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-purple-500 cursor-pointer">
             <div class="relative">
               <div class="absolute top-0 right-0 bg-gradient-to-l from-purple-600 to-blue-500 text-white px-4 py-1 rounded-bl-lg font-medium">Premium</div>
-              <img src="https://images.unsplash.com/photo-1620891549027-942fdc95d3f5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVzbGF8ZW58MHx8MHx8fDA%3D" alt="Mobil Mewah" class="w-full h-48 object-cover" />
+              <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mobil Mewah" class="w-full h-48 object-cover" />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold">Tesla Model S</h3>
@@ -98,7 +96,7 @@
           <div class="vehicle-card bg-gray-800 bg-opacity-50 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-700 hover:border-purple-500 cursor-pointer">
             <div class="relative">
               <div class="absolute top-0 right-0 bg-gradient-to-l from-green-600 to-teal-500 text-white px-4 py-1 rounded-bl-lg font-medium">Eco</div>
-              <img src="https://images.unsplash.com/photo-1638618164682-12b986ec2a75?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dG95b3RhJTIwcHJpdXN8ZW58MHx8MHx8fDA%3D" alt="Mobil Eco" class="w-full h-48 object-cover" />
+              <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mobil Eco" class="w-full h-48 object-cover" />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold">Toyota Prius</h3>
@@ -325,7 +323,7 @@
 
                   echo "<div class='vehicle-card bg-gray-700 bg-opacity-50 rounded-lg p-4 cursor-pointer hover:bg-gray-600 transition-colors border border-gray-600 hover:border-purple-500' data-vehicle-id='{$vehicle['id']}'>
                   <div class='flex items-center'>
-                    <img src='dashboard/uploads/armada/{$vehicle['gambar']}' alt='{$vehicle['merk']}' class='w-24 h-24 object-cover rounded-lg' />
+                    <img src='{$vehicle['gambar']}' alt='{$vehicle['merk']}' class='w-24 h-24 object-cover rounded-lg' />
                     <div class='ml-4'>
                       <div class='flex justify-between items-center'>
                         <h4 class='font-semibold'>{$vehicle['merk']}</h4>
@@ -464,6 +462,10 @@
           </form>
         </div>
       </div>
+
+      <!-- Decorative elements -->
+      <div class="absolute bottom-1/4 right-0 w-80 h-80 bg-purple-600 rounded-full filter blur-3xl opacity-10 z-10"></div>
+      <div class="absolute top-1/3 left-10 w-72 h-72 bg-blue-600 rounded-full filter blur-3xl opacity-10 z-10"></div>
     </section>
 
     <!-- Features Section -->
@@ -518,12 +520,12 @@
       </div>
     </section>
 
-    <!-- {/* Testimonials Section */} -->
+    <!-- Testimonials Section -->
     <section class="py-16 relative">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold">What Our Customers Say</h2>
-          <p class="text-gray-300 mt-2">Real experiences from satisfied clients</p>
+          <h2 class="text-3xl font-bold">Apa Kata Pelanggan Kami</h2>
+          <p class="text-gray-300 mt-2">Pengalaman nyata dari klien yang puas</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -534,24 +536,24 @@
                 <h4 class="font-medium">John Doe</h4>
                 <div class="flex text-yellow-400">
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3 .921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784 .57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.8 8.937c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                   </svg>
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3 .921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784 .57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.8 8.937c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                   </svg>
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3 .921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784 .57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.8 8.937c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                   </svg>
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3 .921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784 .57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.8 8.937c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                   </svg>
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3 .921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784 .57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.8 8.937c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                   </svg>
                 </div>
               </div>
             </div>
-            <p class="text-gray-300">"The service was exceptional from start to finish. The car was in pristine condition and the whole rental process was seamless. Will definitely use DriveEasy again!"</p>
+            <p class="text-gray-300">"Layanan yang luar biasa dari awal hingga akhir. Mobil dalam kondisi sempurna dan proses sewa sangat mudah. Pasti akan menggunakan DriveEasy lagi!"</p>
           </div>
 
           <div class="bg-gray-800 bg-opacity-50 rounded-lg p-6 shadow-lg border border-gray-700">
@@ -561,24 +563,24 @@
                 <h4 class="font-medium">Sarah Johnson</h4>
                 <div class="flex text-yellow-400">
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3 .921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784 .57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.8 8.937c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                   </svg>
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3 .921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784 .57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.8 8.937c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                   </svg>
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3 .921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784 .57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.8 8.937c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                   </svg>
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3 .921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784 .57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.8 8.937c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                   </svg>
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3 .921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784 .57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.8 8.937c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                   </svg>
                 </div>
               </div>
             </div>
-            <p class="text-gray-300">"I rented a Tesla Model S for a weekend trip and was blown away by how easy the process was. The booking platform is intuitive and the staff were incredibly helpful. Highly recommend!"</p>
+            <p class="text-gray-300">"Saya menyewa Tesla Model S untuk perjalanan akhir pekan dan sangat terkesan dengan betapa mudahnya proses ini. Platform pemesanan sangat intuitif dan staf sangat membantu. Sangat direkomendasikan!"</p>
           </div>
 
           <div class="bg-gray-800 bg-opacity-50 rounded-lg p-6 shadow-lg border border-gray-700">
@@ -588,264 +590,6 @@
                 <h4 class="font-medium">Michael Thompson</h4>
                 <div class="flex text-yellow-400">
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3 .921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784 .57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.8 8.937c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                   </svg>
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                  </svg>
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                  </svg>
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                  </svg>
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <p class="text-gray-300">"As a frequent business traveler, I've used many car rental services, but DriveEasy stands out for their premium fleet and outstanding customer service. They've become my go-to rental company."</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- {/* Decorative element */} -->
-      <div class="absolute bottom-1/2 left-0 w-72 h-72 bg-purple-600 rounded-full filter blur-3xl opacity-10"></div>
-    </section>
-
-    <!-- {/* Footer Section */} -->
-    <footer class="py-12 bg-gray-900 bg-opacity-70">
-      <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h4 class="text-xl font-bold mb-4">DriveEasy</h4>
-            <p class="text-gray-300 mb-4">Premium car rentals for all your needs. Experience luxury and convenience.</p>
-            <div class="flex space-x-4">
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
-                </svg>
-              </a>
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.923 7.416c0 .109 0 .22-.005.329a7.23 7.23 0 0 1-7.255 7.255 7.21 7.21 0 0 1-3.908-1.147 5.15 5.15 0 0 0 3.798-1.063 2.56 2.56 0 0 1-2.387-1.775 2.56 2.56 0 0 0 1.152-.044 2.57 2.57 0 0 1-2.055-2.515v-.033c.346.192.739.305 1.159.319a2.57 2.57 0 0 1-.794-3.428 7.29 7.29 0 0 0 5.295 2.687 2.56 2.56 0 0 1 4.366-2.334 5.13 5.13 0 0 0 1.628-.621 2.57 2.57 0 0 1-1.126 1.417 5.12 5.12 0 0 0 1.475-.4 5.2 5.2 0 0 1-1.278 1.327c.006.11.006.22.006.33z" />
-                </svg>
-              </a>
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 3.802c2.067 0 2.31.007 3.127.045.752.034 1.16.16 1.43.265.36.14.613.307.882.576.269.269.436.522.576.882.105.27.23.678.265 1.43.038.817.045 1.06.045 3.127s-.007 2.31-.045 3.127c-.034.753-.16 1.162-.265 1.43-.14.36-.307.613-.576.882-.269.27-.522.436-.882.576-.27.105-.678.231-1.43.265-.817.038-1.06.045-3.127.045s-2.31-.007-3.127-.045c-.753-.034-1.162-.16-1.43-.265a2.392 2.392 0 0 1-.882-.576 2.392 2.392 0 0 1-.576-.882c-.105-.268-.231-.677-.265-1.43-.038-.817-.045-1.06-.045-3.127s.007-2.31.045-3.127c.034-.752.16-1.16.265-1.43.14-.36.307-.613.576-.882a2.392 2.392 0 0 1 .882-.576c.268-.105.677-.231 1.43-.265.817-.038 1.06-.045 3.127-.045z" />
-                </svg>
-              </a>
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-5 15v-3.5c0-1.1-.9-2-2-2h-1.5v-2h1.5c2.2 0 4 1.8 4 4V18h-2m-2-7h-1.5V9H14c1.2 0 2 .8 2 2s-.8 2-2 2m-5-4h-3v2h3v1.5h-2c-1.1 0-2 .9-2 2V18h5v-1.5h-3v-1h3V7z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul class="space-y-2">
-              <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
-              <li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Vehicles</a></li>
-              <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-            <ul class="space-y-2 text-gray-300">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-                <span>123 Car Street, Cityville, ST 12345</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                </svg>
-                <span>+1 (555) 123-4567</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                </svg>
-                <span>info@driveeasy.com</span>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
-            <p class="text-gray-300 mb-4">Subscribe to our newsletter to receive updates and special offers.</p>
-            <form class="flex flex-col space-y-2">
-              <input type="email" placeholder="Your email address" class="p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50" />
-              <button type="submit" class="p-3 bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg hover:opacity-90 transition-opacity font-medium">Subscribe</button>
-            </form>
-          </div>
-        </div>
-
-        <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p class="text-gray-300 mb-4 md:mb-0">&copy; 2025 DriveEasy. All rights reserved.</p>
-          <div class="flex space-x-6">
-            <a href="#" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" class="text-gray-300 hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" class="text-gray-300 hover:text-white transition-colors">FAQ</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-  <script src="script.js"></script>
-
-  <!-- Script untuk menangani proses booking -->
-  <script>
-    // Menampilkan pesan sukses jika booking berhasil
-    document.addEventListener('DOMContentLoaded', function() {
-      // Cek apakah ada parameter booking_success di URL
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get('booking_success') === 'true') {
-        alert('Booking berhasil! Kendaraan Anda telah dipesan.');
-        // Hapus parameter dari URL
-        window.history.replaceState({}, document.title, window.location.pathname);
-      }
-
-      // Inisialisasi form booking
-      initBookingForm();
-    });
-
-    function initBookingForm() {
-      // Mengatur pemilihan kendaraan
-      const vehicleCards = document.querySelectorAll('.vehicle-card');
-      const selectedVehicleInput = document.getElementById('selected_vehicle_id');
-
-      vehicleCards.forEach(card => {
-        card.addEventListener('click', function() {
-          // Hapus kelas selected dari semua kartu
-          vehicleCards.forEach(c => c.classList.remove('selected', 'border-purple-500', 'border-2'));
-          // Tambahkan kelas selected ke kartu yang dipilih
-          this.classList.add('selected', 'border-purple-500', 'border-2');
-          // Simpan ID kendaraan yang dipilih
-          selectedVehicleInput.value = this.getAttribute('data-vehicle-id');
-        });
-      });
-
-      // Validasi sebelum pindah ke langkah berikutnya
-      const nextButtons = document.querySelectorAll('.next-step');
-      nextButtons.forEach((button, index) => {
-        button.addEventListener('click', function() {
-          // Validasi langkah pertama (lokasi dan tanggal)
-          if (index === 0) {
-            const pickupLocation = document.getElementById('pickup_location').value;
-            const returnLocation = document.getElementById('return_location').value;
-            const pickupDate = document.getElementById('pickup_date').value;
-            const returnDate = document.getElementById('return_date').value;
-            const pickupTime = document.getElementById('pickup_time').value;
-            const returnTime = document.getElementById('return_time').value;
-
-            if (!pickupLocation || !returnLocation || !pickupDate || !returnDate || !pickupTime || !returnTime) {
-              alert('Silakan lengkapi semua field lokasi dan tanggal.');
-              return;
-            }
-
-            // Validasi tanggal
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-            const pickup = new Date(pickupDate);
-            const returnD = new Date(returnDate);
-
-            if (pickup < today) {
-              alert('Tanggal pengambilan tidak boleh kurang dari hari ini.');
-              return;
-            }
-
-            if (returnD < pickup) {
-              alert('Tanggal pengembalian tidak boleh kurang dari tanggal pengambilan.');
-              return;
-            }
-          }
-
-          // Validasi langkah kedua (pemilihan kendaraan)
-          if (index === 1) {
-            if (!selectedVehicleInput.value) {
-              alert('Silakan pilih kendaraan.');
-              return;
-            }
-
-            // Perbarui ringkasan booking
-            updateBookingSummary();
-          }
-
-          // Validasi langkah ketiga (informasi personal)
-          if (index === 2) {
-            const firstName = document.getElementById('first_name').value;
-            const lastName = document.getElementById('last_name').value;
-            const ktp = document.getElementById('ktp').value;
-            const phone = document.getElementById('phone').value;
-            const purpose = document.getElementById('purpose').value;
-            const terms = document.getElementById('terms').checked;
-
-            if (!firstName || !lastName || !ktp || !phone || !purpose) {
-              alert('Silakan lengkapi semua informasi personal.');
-              return;
-            }
-
-            if (ktp.length !== 16) {
-              alert('Nomor KTP harus terdiri dari 16 digit.');
-              return;
-            }
-
-            if (!terms) {
-              alert('Anda harus menyetujui syarat dan ketentuan.');
-              return;
-            }
-
-            // Perbarui ringkasan booking
-            updateBookingSummary();
-          }
-        });
-      });
-
-      // Menangani submit form
-      const bookingForm = document.getElementById('booking-form');
-      bookingForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Validasi final
-        if (!selectedVehicleInput.value) {
-          alert('Silakan pilih kendaraan.');
-          return;
-        }
-
-        // Kirim data form menggunakan AJAX
-        const formData = new FormData(bookingForm);
-
-        fetch('process_booking.php', {
-            method: 'POST',
-            body: formData
-          })
-          .then(response => response.json())
-          .then(data => {
-            if (data.status === 'success') {
-              window.location.href = data.redirect;
-            } else {
-              alert('Error: ' + data.message);
-            }
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            alert('Terjadi kesalahan saat memproses booking. Silakan coba lagi.');
-          });
-      });
-    }
-  </script>
-  <script src="booking-summary.js"></script>
-</body>
-
-</html>
+                  <svg class="w-4 h-4

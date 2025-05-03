@@ -876,7 +876,7 @@ include '../auth/config.php';
             
             // Tampilkan preview KTP jika ada
             if (data.ktp_peminjam) {
-              $('#ktp_preview').attr('src', data.ktp_peminjam);
+              $('#ktp_preview').attr('src', "../" + data.ktp_peminjam);
               $('#ktp_preview_container').show();
             } else {
               $('#ktp_preview_container').hide();

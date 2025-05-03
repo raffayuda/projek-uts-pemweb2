@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - DriveEasy</title>
+    <title>Tentang Kami - DriveEasy</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
@@ -15,8 +15,8 @@
         <section class="py-12 md:py-20 relative">
           <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-              <h1 class="text-4xl md:text-6xl font-bold leading-tight">About <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">DriveEasy</span></h1>
-              <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto">Your premium car rental service dedicated to providing exceptional vehicles and outstanding customer experiences.</p>
+              <h1 class="text-4xl md:text-6xl font-bold leading-tight">Tentang <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">DriveEasy</span></h1>
+              <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto">Layanan penyewaan mobil premium Anda yang berdedikasi untuk menyediakan kendaraan luar biasa dan pengalaman pelanggan yang istimewa.</p>
             </div>
           </div>
           
@@ -30,13 +30,13 @@
           <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center">
               <div class="rounded-lg overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Car Rental Office" class="w-full h-auto" />
+                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kantor Penyewaan Mobil" class="w-full h-auto" />
               </div>
               <div class="space-y-6">
-                <h2 class="text-3xl font-bold">Our Story</h2>
-                <p class="text-gray-300">Founded in 2015, DriveEasy began with a simple mission: to revolutionize the car rental experience by combining premium vehicles with exceptional customer service.</p>
-                <p class="text-gray-300">What started as a small fleet of luxury cars has grown into a diverse collection of vehicles to suit every need and preference. From eco-friendly hybrids to powerful sports cars and spacious SUVs, we've expanded our offerings while maintaining our commitment to quality and service.</p>
-                <p class="text-gray-300">Today, DriveEasy operates in multiple locations across the country, serving thousands of satisfied customers who return to us for their transportation needs time and again.</p>
+                <h2 class="text-3xl font-bold">Kisah Kami</h2>
+                <p class="text-gray-300">Didirikan pada tahun 2015, DriveEasy memulai dengan misi sederhana: merevolusi pengalaman penyewaan mobil dengan menggabungkan kendaraan premium dengan layanan pelanggan yang luar biasa.</p>
+                <p class="text-gray-300">Berawal dari armada kecil mobil mewah, kini telah berkembang menjadi koleksi kendaraan beragam yang sesuai dengan setiap kebutuhan dan preferensi. Dari hibrida ramah lingkungan hingga mobil sport bertenaga dan SUV yang luas, kami telah memperluas penawaran kami sambil tetap menjaga komitmen terhadap kualitas dan layanan.</p>
+                <p class="text-gray-300">Saat ini, DriveEasy beroperasi di beberapa lokasi di seluruh negeri, melayani ribuan pelanggan puas yang kembali kepada kami untuk kebutuhan transportasi mereka berulang kali.</p>
               </div>
             </div>
           </div>
@@ -46,8 +46,8 @@
         <section class="py-16">
           <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-              <h2 class="text-3xl font-bold">Our Vision & Mission</h2>
-              <p class="text-gray-300 mt-2">Driving the future of premium car rentals</p>
+              <h2 class="text-3xl font-bold">Visi & Misi Kami</h2>
+              <p class="text-gray-300 mt-2">Menggerakkan masa depan penyewaan mobil premium</p>
             </div>
             
             <div class="grid md:grid-cols-2 gap-8">
@@ -58,8 +58,8 @@
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                   </svg>
                 </div>
-                <h3 class="text-xl font-bold text-center mb-4">Our Vision</h3>
-                <p class="text-gray-300 text-center">To be the leading premium car rental service, recognized for our exceptional fleet, innovative solutions, and customer-centric approach. We envision a world where renting a car is not just a necessity but an experience to look forward to.</p>
+                <h3 class="text-xl font-bold text-center mb-4">Visi Kami</h3>
+                <p class="text-gray-300 text-center">Menjadi layanan penyewaan mobil premium terkemuka, yang dikenal karena armada luar biasa, solusi inovatif, dan pendekatan berpusat pada pelanggan. Kami membayangkan dunia di mana menyewa mobil bukan hanya kebutuhan, tetapi pengalaman yang dinantikan.</p>
               </div>
               
               <div class="bg-gray-800 bg-opacity-50 rounded-lg p-8 border border-gray-700 hover:border-purple-500 transition-colors">
@@ -68,11 +68,12 @@
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                   </svg>
                 </div>
-                <h3 class="text-xl font-bold text-center mb-4">Our Mission</h3>
-                <p class="text-gray-300 text-center">To provide our customers with the highest quality vehicles and service, ensuring every rental experience is smooth, enjoyable, and exceeds expectations. We are committed to innovation, sustainability, and creating value for our customers, employees, and communities.</p>
+                <h3 class="text-xl font-bold text-center mb-4">Misi Kami</h3>
+                <p class="text-gray-300 text-center">Menyediakan pelanggan kami dengan kendaraan dan layanan berkualitas tinggi, memastikan setiap pengalaman penyewaan berjalan lancar, menyenangkan, dan melebihi ekspektasi. Kami berkomitmen pada inovasi, keberlanjutan, dan menciptakan nilai bagi pelanggan, karyawan, dan komunitas kami.</p>
               </div>
             </div>
           </div>
         </section>
-
-        
+    </div>
+</body>
+</html>

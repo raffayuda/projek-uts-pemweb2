@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - DriveEasy</title>
+    <title>Hubungi Kami - DriveEasy</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
@@ -15,8 +15,8 @@
         <section class="py-12 md:py-20 relative">
           <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-              <h1 class="text-4xl md:text-6xl font-bold leading-tight">Get in <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Touch</span></h1>
-              <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto">Have questions or need assistance? We're here to help you with all your car rental needs.</p>
+              <h1 class="text-4xl md:text-6xl font-bold leading-tight">Hubungi <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Kami</span></h1>
+              <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto">Punya pertanyaan atau membutuhkan bantuan? Kami siap membantu Anda dengan semua kebutuhan penyewaan mobil Anda.</p>
             </div>
           </div>
           
@@ -31,7 +31,7 @@
             <div class="grid md:grid-cols-2 gap-12">
               <!-- Contact Information -->
               <div class="bg-gray-800 bg-opacity-50 rounded-lg p-8 border border-gray-700">
-                <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+                <h2 class="text-2xl font-bold mb-6">Informasi Kontak</h2>
                 
                 <div class="space-y-6">
                   <!-- Headquarters -->
@@ -40,7 +40,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                     </svg>
                     <div>
-                      <h3 class="text-lg font-semibold mb-1">Headquarters</h3>
+                      <h3 class="text-lg font-semibold mb-1">Kantor Pusat</h3>
                       <p class="text-gray-300">Jl. Sudirman No. 123<br>Jakarta Pusat, 10220<br>Indonesia</p>
                     </div>
                   </div>
@@ -51,8 +51,8 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                     </svg>
                     <div>
-                      <h3 class="text-lg font-semibold mb-1">Customer Service</h3>
-                      <p class="text-gray-300">+62 21 5555 6789<br>Toll-free: 0800-123-4567</p>
+                      <h3 class="text-lg font-semibold mb-1">Layanan Pelanggan</h3>
+                      <p class="text-gray-300">+62 21 5555 6789<br>Bebas Pulsa: 0800-123-4567</p>
                     </div>
                   </div>
                   
@@ -62,7 +62,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
                     <div>
-                      <h3 class="text-lg font-semibold mb-1">Email Support</h3>
+                      <h3 class="text-lg font-semibold mb-1">Dukungan Email</h3>
                       <p class="text-gray-300">info@driveeasy.com<br>support@driveeasy.com</p>
                     </div>
                   </div>
@@ -73,15 +73,15 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                     <div>
-                      <h3 class="text-lg font-semibold mb-1">Business Hours</h3>
-                      <p class="text-gray-300">Monday - Friday: 8AM - 8PM<br>Saturday: 9AM - 6PM<br>Sunday: 10AM - 4PM</p>
+                      <h3 class="text-lg font-semibold mb-1">Jam Operasional</h3>
+                      <p class="text-gray-300">Senin - Jumat: 08:00 - 20:00<br>Sabtu: 09:00 - 18:00<br>Minggu: 10:00 - 16:00</p>
                     </div>
                   </div>
                 </div>
                 
                 <!-- Social Media Links -->
                 <div class="mt-8">
-                  <h3 class="text-lg font-semibold mb-3">Connect With Us</h3>
+                  <h3 class="text-lg font-semibold mb-3">Terhubung Dengan Kami</h3>
                   <div class="flex space-x-4">
                     <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-purple-600 transition-colors">
                       <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -109,125 +109,124 @@
               
               <!-- Contact Form -->
               <div class="bg-gray-800 bg-opacity-50 rounded-lg p-8 border border-gray-700">
-                <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+                <h2 class="text-2xl font-bold mb-6">Kirim Pesan</h2>
                 <form class="space-y-6">
                   <div class="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                      <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Nama Anda</label>
                       <input type="text" id="name" name="name" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="John Doe">
                     </div>
                     <div>
-                      <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                      <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Alamat Email</label>
                       <input type="email" id="email" name="email" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="john@example.com">
                     </div>
                   </div>
                   
                   <div>
-                    <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+                    <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Nomor Telepon</label>
                     <input type="tel" id="phone" name="phone" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="+62 xxx-xxxx-xxxx">
                   </div>
                   
                   <div>
-                    <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                    <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subjek</label>
                     <select id="subject" name="subject" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                      <option value="" disabled selected>Select a subject</option>
-                      <option value="reservation">Reservation Inquiry</option>
-                      <option value="support">Customer Support</option>
-                      <option value="feedback">Feedback</option>
-                      <option value="partnership">Business Partnership</option>
-                      <option value="other">Other</option>
+                      <option value="" disabled selected>Pilih subjek</option>
+                      <option value="reservation">Pertanyaan Reservasi</option>
+                      <option value="support">Dukungan Pelanggan</option>
+                      <option value="feedback">Umpan Balik</option>
+                      <option value="partnership">Kemitraan Bisnis</option>
+                      <option value="other">Lainnya</option>
                     </select>
                   </div>
                   
                   <div>
-                    <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
-                    <textarea id="message" name="message" rows="5" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="How can we help you?"></textarea>
+                    <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Pesan Anda</label>
+                    <textarea id="message" name="message" rows="5" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Bagaimana kami bisa membantu Anda?"></textarea>
                   </div>
                   
                   <div class="flex items-center">
                     <input id="terms" name="terms" type="checkbox" class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-500 rounded">
-                    <label for="terms" class="ml-2 block text-sm text-gray-300">I agree to the <a href="#" class="text-purple-400 hover:text-purple-300">Privacy Policy</a> and <a href="#" class="text-purple-400 hover:text-purple-300">Terms of Service</a></label>
+                    <label for="terms" class="ml-2 block text-sm text-gray-300">Saya setuju dengan <a href="#" class="text-purple-400 hover:text-purple-300">Kebijakan Privasi</a> dan <a href="#" class="text-purple-400 hover:text-purple-300">Syarat Layanan</a></label>
                   </div>
                   
-                  <button type="submit" class="w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium rounded-lg hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">Send Message</button>
+                  <button type="submit" class="w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium rounded-lg hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">Kirim Pesan</button>
                 </form>
               </div>
             </div>
           </div>
         </section>
 
-
         <!-- FAQ Section -->
         <section class="py-12">
           <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-              <h2 class="text-3xl font-bold">Frequently Asked Questions</h2>
-              <p class="text-gray-300 mt-2">Find answers to common questions about our services</p>
+              <h2 class="text-3xl font-bold">Pertanyaan yang Sering Diajukan</h2>
+              <p class="text-gray-300 mt-2">Temukan jawaban atas pertanyaan umum tentang layanan kami</p>
             </div>
             
             <div class="max-w-4xl mx-auto space-y-6">
               <!-- FAQ Item 1 -->
               <div class="bg-gray-800 bg-opacity-50 rounded-lg border border-gray-700 overflow-hidden">
                 <button class="w-full flex items-center justify-between p-6 focus:outline-none">
-                  <span class="text-lg font-medium">What documents do I need to rent a car?</span>
+                  <span class="text-lg font-medium">Dokumen apa yang diperlukan untuk menyewa mobil?</span>
                   <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
                 <div class="px-6 pb-6">
-                  <p class="text-gray-300">To rent a car with DriveEasy, you'll need a valid driver's license, a credit card in your name, and a valid ID or passport. International customers may need an International Driving Permit depending on their country of origin.</p>
+                  <p class="text-gray-300">Untuk menyewa mobil dengan DriveEasy, Anda memerlukan SIM yang valid, kartu kredit atas nama Anda, dan KTP atau paspor yang valid. Pelanggan internasional mungkin memerlukan Izin Mengemudi Internasional tergantung pada negara asal mereka.</p>
                 </div>
               </div>
               
               <!-- FAQ Item 2 -->
               <div class="bg-gray-800 bg-opacity-50 rounded-lg border border-gray-700 overflow-hidden">
                 <button class="w-full flex items-center justify-between p-6 focus:outline-none">
-                  <span class="text-lg font-medium">What is your cancellation policy?</span>
+                  <span class="text-lg font-medium">Apa kebijakan pembatalan Anda?</span>
                   <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
                 <div class="px-6 pb-6">
-                  <p class="text-gray-300">We offer free cancellation up to 48 hours before your scheduled pickup time. Cancellations made within 48 hours may be subject to a fee equivalent to one day's rental. No-shows will be charged the full rental amount.</p>
+                  <p class="text-gray-300">Kami menawarkan pembatalan gratis hingga 48 jam sebelum waktu penjemputan yang dijadwalkan. Pembatalan yang dilakukan dalam waktu 48 jam mungkin dikenakan biaya sebesar sewa satu hari. Ketidakhadiran akan dikenakan biaya sewa penuh.</p>
                 </div>
               </div>
               
               <!-- FAQ Item 3 -->
               <div class="bg-gray-800 bg-opacity-50 rounded-lg border border-gray-700 overflow-hidden">
                 <button class="w-full flex items-center justify-between p-6 focus:outline-none">
-                  <span class="text-lg font-medium">Is insurance included in the rental price?</span>
+                  <span class="text-lg font-medium">Apakah asuransi termasuk dalam harga sewa?</span>
                   <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
                 <div class="px-6 pb-6">
-                  <p class="text-gray-300">Basic insurance coverage is included in all our rental prices. This includes collision damage waiver (CDW) and theft protection. Additional coverage options such as personal accident insurance, roadside assistance, and reduced excess are available for an extra fee.</p>
+                  <p class="text-gray-300">Cakupan asuransi dasar termasuk dalam semua harga sewa kami. Ini mencakup pengabaian kerusakan tabrakan (CDW) dan perlindungan pencurian. Opsi cakupan tambahan seperti asuransi kecelakaan pribadi, bantuan pinggir jalan, dan pengurangan kelebihan tersedia dengan biaya tambahan.</p>
                 </div>
               </div>
               
               <!-- FAQ Item 4 -->
               <div class="bg-gray-800 bg-opacity-50 rounded-lg border border-gray-700 overflow-hidden">
                 <button class="w-full flex items-center justify-between p-6 focus:outline-none">
-                  <span class="text-lg font-medium">Can I return the car to a different location?</span>
+                  <span class="text-lg font-medium">Apakah saya bisa mengembalikan mobil ke lokasi lain?</span>
                   <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
                 <div class="px-6 pb-6">
-                  <p class="text-gray-300">Yes, we offer one-way rentals between our locations. Additional fees may apply depending on the distance between pickup and drop-off locations. Please specify your drop-off location when making your reservation.</p>
+                  <p class="text-gray-300">Ya, kami menawarkan sewa satu arah antar lokasi kami. Biaya tambahan mungkin berlaku tergantung pada jarak antara lokasi penjemputan dan pengembalian. Harap tentukan lokasi pengembalian Anda saat membuat reservasi.</p>
                 </div>
               </div>
               
               <!-- FAQ Item 5 -->
               <div class="bg-gray-800 bg-opacity-50 rounded-lg border border-gray-700 overflow-hidden">
                 <button class="w-full flex items-center justify-between p-6 focus:outline-none">
-                  <span class="text-lg font-medium">What if I need to extend my rental period?</span>
+                  <span class="text-lg font-medium">Bagaimana jika saya perlu memperpanjang masa sewa?</span>
                   <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
                 <div class="px-6 pb-6">
-                  <p class="text-gray-300">You can extend your rental period by contacting our customer service at least 24 hours before your scheduled return time. Extensions are subject to vehicle availability and may require an updated rental agreement.</p>
+                  <p class="text-gray-300">Anda dapat memperpanjang masa sewa dengan menghubungi layanan pelanggan kami setidaknya 24 jam sebelum waktu pengembalian yang dijadwalkan. Perpanjangan tergantung pada ketersediaan kendaraan dan mungkin memerlukan perjanjian sewa yang diperbarui.</p>
                 </div>
               </div>
             </div>
@@ -240,7 +239,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div class="md:col-span-1">
                 <h3 class="text-xl font-bold mb-4">DriveEasy</h3>
-                <p class="text-gray-300 mb-4">Your premium car rental service dedicated to providing exceptional vehicles and outstanding customer experiences.</p>
+                <p class="text-gray-300 mb-4">Layanan penyewaan mobil premium Anda yang berdedikasi untuk menyediakan kendaraan luar biasa dan pengalaman pelanggan yang istimewa.</p>
                 <div class="flex space-x-4">
                   <a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -256,39 +255,39 @@
               </div>
               
               <div>
-                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <h3 class="text-lg font-semibold mb-4">Tautan Cepat</h3>
                 <ul class="space-y-2">
-                  <li><a href="index.html" class="text-gray-300 hover:text-purple-400 transition-colors">Home</a></li>
-                  <li><a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">Vehicles</a></li>
-                  <li><a href="location.html" class="text-gray-300 hover:text-purple-400 transition-colors">Locations</a></li>
-                  <li><a href="about.html" class="text-gray-300 hover:text-purple-400 transition-colors">About Us</a></li>
-                  <li><a href="contact.html" class="text-gray-300 hover:text-purple-400 transition-colors">Contact</a></li>
+                  <li><a href="index.html" class="text-gray-300 hover:text-purple-400 transition-colors">Beranda</a></li>
+                  <li><a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">Kendaraan</a></li>
+                  <li><a href="location.html" class="text-gray-300 hover:text-purple-400 transition-colors">Lokasi</a></li>
+                  <li><a href="about.html" class="text-gray-300 hover:text-purple-400 transition-colors">Tentang Kami</a></li>
+                  <li><a href="contact.html" class="text-gray-300 hover:text-purple-400 transition-colors">Kontak</a></li>
                 </ul>
               </div>
               
               <div>
-                <h3 class="text-lg font-semibold mb-4">Services</h3>
+                <h3 class="text-lg font-semibold mb-4">Layanan</h3>
                 <ul class="space-y-2">
-                  <li><a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">Car Rental</a></li>
-                  <li><a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">Long-term Rental</a></li>
-                  <li><a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">Airport Transfer</a></li>
-                  <li><a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">Chauffeur Service</a></li>
-                  <li><a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">Corporate Solutions</a></li>
+                  <li><a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">Sewa Mobil</a></li>
+                  <li><a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">Sewa Jangka Panjang</a></li>
+                  <li><a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">Transfer Bandara</a></li>
+                  <li><a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">Layanan Sopir</a></li>
+                  <li><a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">Solusi Korporasi</a></li>
                 </ul>
               </div>
               
               <div>
-                <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
-                <p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and offers.</p>
+                <h3 class="text-lg font-semibold mb-4">Buletin</h3>
+                <p class="text-gray-300 mb-4">Berlangganan buletin kami untuk pembaruan dan penawaran terbaru.</p>
                 <form class="flex">
-                  <input type="email" placeholder="Your email address" class="flex-1 bg-gray-700 border border-gray-600 rounded-l-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                  <button type="submit" class="bg-gradient-to-r from-purple-600 to-blue-500 rounded-r-lg px-4 py-2 text-white font-medium hover:opacity-90 transition-opacity">Subscribe</button>
+                  <input type="email" placeholder="Alamat email Anda" class="flex-1 bg-gray-700 border border-gray-600 rounded-l-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                  <button type="submit" class="bg-gradient-to-r from-purple-600 to-blue-500 rounded-r-lg px-4 py-2 text-white font-medium hover:opacity-90 transition-opacity">Berlangganan</button>
                 </form>
               </div>
             </div>
             
             <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-              <p>&copy; 2023 DriveEasy. All rights reserved.</p>
+              <p>© 2023 DriveEasy. Hak cipta dilindungi.</p>
             </div>
           </div>
         </footer>

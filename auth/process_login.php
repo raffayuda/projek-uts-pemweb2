@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "SELECT u.*, r.name as role_name FROM user u 
+    $sql = "SELECT u.*, r.nama as role_name FROM user u 
             JOIN role_user r ON u.role_id = r.id 
             WHERE u.email = ?";
     

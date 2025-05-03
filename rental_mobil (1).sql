@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Apr 2025 pada 11.40
+-- Waktu pembuatan: 02 Bulan Mei 2025 pada 11.06
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -118,11 +118,37 @@ INSERT INTO `lokasi_pengembalian` (`id`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `pembayaran`
+--
+
+CREATE TABLE `pembayaran` (
+  `id` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `jumlah_bayar` double NOT NULL,
+  `peminjaman_id` int(11) NOT NULL,
+  `status_pembayaran` varchar(20) NOT NULL DEFAULT 'Lunas',
+  `metode_pembayaran` varchar(50) DEFAULT NULL,
+  `keterangan` text DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `pembayaran`
+--
+
+INSERT INTO `pembayaran` (`id`, `tanggal`, `jumlah_bayar`, `peminjaman_id`, `status_pembayaran`, `metode_pembayaran`, `keterangan`, `created_by`, `created_at`, `updated_at`) VALUES
+(1, '2025-04-29', 3000000, 1, 'Lunas', NULL, NULL, NULL, '2025-04-29 12:39:22', '2025-04-29 12:39:22');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `peminjaman`
 --
 
 CREATE TABLE `peminjaman` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `nama_peminjam` varchar(45) NOT NULL,
   `ktp_peminjam` varchar(255) NOT NULL,
   `keperluan_pinjam` varchar(100) DEFAULT NULL,
@@ -138,203 +164,48 @@ CREATE TABLE `peminjaman` (
   `waktu_pengembalian` time DEFAULT NULL,
   `phone` varchar(20) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`id`),
-  KEY `fk_peminjaman_armada` (`armada_id`)
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Struktur dari tabel `pembayaran`
---
-
-CREATE TABLE `pembayaran` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `tanggal` date NOT NULL,
-  `jumlah_bayar` double NOT NULL,
-  `peminjaman_id` int(11) NOT NULL,
-  `status_pembayaran` varchar(20) NOT NULL DEFAULT 'Lunas',
-  `metode_pembayaran` varchar(50) DEFAULT NULL,
-  `keterangan` text DEFAULT NULL,
-  `created_by` int(11) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`id`),
-  KEY `fk_pembayaran_peminjaman` (`peminjaman_id`),
-  CONSTRAINT `fk_pembayaran_peminjaman` FOREIGN KEY (`peminjaman_id`) REFERENCES `peminjaman` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
-
---
--- Dumping data untuk tabel `pembayaran`
---
-
-INSERT INTO `pembayaran` (`id`, `tanggal`, `jumlah_bayar`, `peminjaman_id`) VALUES
-(1, '2025-05-01', 360, 1),
-(2, '2025-05-05', 150, 2),
-(3, '2025-05-10', 180, 3);
-
--- --------------------------------------------------------
-
-
 
 --
 -- Dumping data untuk tabel `peminjaman`
 --
 
-INSERT INTO `peminjaman` (`id`, `nama_peminjam`, `ktp_peminjam`, `keperluan_pinjam`, `mulai`, `selesai`, `biaya`, `armada_id`, `komentar_peminjam`, `status_pinjam`, `pengembalian_id`, `pengambilan_id`, `waktu_pengambilan`, `waktu_pengembalian`, `phone`) VALUES
-(1, 'Budi Santoso', '3275012345678901', 'Liburan Keluarga', '2025-05-01', '2025-05-03', 360, 1, 'Mobil sangat nyaman dan bersih', 'Selesai', 1, 1, '10:00:00', '15:00:00', NULL),
-(2, 'Siti Rahayu', '3275023456789012', 'Perjalanan Bisnis', '2025-05-05', '2025-05-07', 150, 2, NULL, 'Dalam Peminjaman', 2, 2, '09:00:00', '18:00:00', NULL),
-(3, 'Ahmad Hidayat', '3275034567890123', 'Tur Kota', '2025-05-10', '2025-05-11', 180, 3, 'Pengalaman mengemudi yang luar biasa', 'Selesai', 1, 3, '08:00:00', '20:00:00', NULL),
-(14, 'Raffa Yuda', 'uploads/ktp/1745486213_Screenshot 2025-01-22 175214.png', 'Vacation', '2025-04-24', '2025-04-26', 15000000, 1, 'bb', 'Dibooking', 2, 1, '16:19:00', '19:16:00', '+628889623663');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `role_user`
---
-
-CREATE TABLE `role_user` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data untuk tabel `role_user`
---
-
-INSERT INTO `role_user` (`id`, `name`) VALUES
-(1, 'admin'),
-(2, 'user');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `user`
---
-
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  `role_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data untuk tabel `user`
---
-
-INSERT INTO `user` (`id`, `name`, `email`, `password`, `role_id`) VALUES
-(1, 'admin', 'admin@gmail.com', 'admin123', 1);
+INSERT INTO `peminjaman` (`id`, `nama_peminjam`, `ktp_peminjam`, `keperluan_pinjam`, `mulai`, `selesai`, `biaya`, `armada_id`, `komentar_peminjam`, `status_pinjam`, `pengembalian_id`, `pengambilan_id`, `waktu_pengambilan`, `waktu_pengembalian`, `phone`, `created_at`, `updated_at`) VALUES
+(1, 'Raffa Yuda', 'uploads/ktp/1745928441_Screenshot 2025-01-06 165952.png', 'Wedding', '2025-04-29', '2025-05-01', 3000000, 6, 'n', 'Dibooking', 2, 1, '19:10:00', '21:06:00', '+628889623663', '2025-04-29 12:07:21', '2025-04-29 12:07:21');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `armada`
---
-ALTER TABLE `armada`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `jenis_kendaraan_id` (`jenis_kendaraan_id`);
-
---
--- Indeks untuk tabel `jenis_kendaraan`
---
-ALTER TABLE `jenis_kendaraan`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `lokasi_pengambilan`
---
-ALTER TABLE `lokasi_pengambilan`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `lokasi_pengembalian`
---
-ALTER TABLE `lokasi_pengembalian`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indeks untuk tabel `pembayaran`
 --
 ALTER TABLE `pembayaran`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `peminjaman_id` (`peminjaman_id`);
+  ADD KEY `fk_pembayaran_peminjaman` (`peminjaman_id`);
 
 --
 -- Indeks untuk tabel `peminjaman`
 --
 ALTER TABLE `peminjaman`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `armada_id` (`armada_id`),
-  ADD KEY `pengembalian_id` (`pengembalian_id`),
-  ADD KEY `pengambilan_id` (`pengambilan_id`);
-
---
--- Indeks untuk tabel `role_user`
---
-ALTER TABLE `role_user`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `role_id` (`role_id`);
+  ADD KEY `fk_peminjaman_armada` (`armada_id`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT untuk tabel `armada`
---
-ALTER TABLE `armada`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT untuk tabel `jenis_kendaraan`
---
-ALTER TABLE `jenis_kendaraan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT untuk tabel `lokasi_pengambilan`
---
-ALTER TABLE `lokasi_pengambilan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT untuk tabel `lokasi_pengembalian`
---
-ALTER TABLE `lokasi_pengembalian`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT untuk tabel `pembayaran`
 --
 ALTER TABLE `pembayaran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT untuk tabel `role_user`
---
-ALTER TABLE `role_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT untuk tabel `user`
---
-ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
@@ -342,30 +213,10 @@ ALTER TABLE `user`
 --
 
 --
--- Ketidakleluasaan untuk tabel `armada`
---
-ALTER TABLE `armada`
-  ADD CONSTRAINT `armada_ibfk_1` FOREIGN KEY (`jenis_kendaraan_id`) REFERENCES `jenis_kendaraan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Ketidakleluasaan untuk tabel `pembayaran`
 --
 ALTER TABLE `pembayaran`
-  ADD CONSTRAINT `pembayaran_ibfk_1` FOREIGN KEY (`peminjaman_id`) REFERENCES `peminjaman` (`id`);
-
---
--- Ketidakleluasaan untuk tabel `peminjaman`
---
-ALTER TABLE `peminjaman`
-  ADD CONSTRAINT `peminjaman_ibfk_1` FOREIGN KEY (`armada_id`) REFERENCES `armada` (`id`),
-  ADD CONSTRAINT `peminjaman_ibfk_2` FOREIGN KEY (`pengambilan_id`) REFERENCES `lokasi_pengambilan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `peminjaman_ibfk_3` FOREIGN KEY (`pengembalian_id`) REFERENCES `lokasi_pengembalian` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Ketidakleluasaan untuk tabel `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `role_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_pembayaran_peminjaman` FOREIGN KEY (`peminjaman_id`) REFERENCES `peminjaman` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

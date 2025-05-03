@@ -1,4 +1,7 @@
-  
+<?php 
+session_start();
+$isLoggedIn = isset($_SESSION['user_id'])
+?>
 
 <header class="fixed w-full z-50">
           <nav class="container mx-auto px-6 py-4">

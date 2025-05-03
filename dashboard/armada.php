@@ -101,6 +101,14 @@ include '../auth/config.php';
             <div class="container-xxl flex-grow-1 container-p-y">
               <h4 class="fw-bold py-3 mb-4">Manajemen Armada</h4>
 
+              <!-- Alert for status messages -->
+              <?php if(isset($_GET['status']) && isset($_GET['message'])): ?>
+                <div class="alert alert-<?php echo ($_GET['status'] == 'success') ? 'success' : 'danger'; ?> alert-dismissible" role="alert">
+                  <?php echo htmlspecialchars($_GET['message']); ?>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              <?php endif; ?>
+
               <!-- Responsive Table -->
               <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
@@ -142,7 +150,7 @@ include '../auth/config.php';
                             while ($row = $result->fetch_assoc()) {
                                 echo "<tr>";
                                 echo "<td>" . $row['id'] . "</td>";
-                                echo "<td><img src='" . $row['gambar'] . "' class='img-preview' alt='" . $row['merk'] . "'></td>";
+                                echo "<td><img src='uploads/armada/" . $row['gambar'] . "' class='img-preview' alt='" . $row['merk'] . "'></td>";
                                 echo "<td>" . $row['merk'] . "</td>";
                                 echo "<td>" . $row['nopol'] . "</td>";
                                 echo "<td>" . $row['jenis_nama'] . "</td>";
@@ -195,7 +203,7 @@ include '../auth/config.php';
                       aria-label="Close"
                     ></button>
                   </div>
-                  <form action="process/armada_process.php" method="post">
+                  <form action="process/armada_process.php" method="post" enctype="multipart/form-data">
                     <div class="modal-body">
                       <div class="row">
                         <div class="col-md-6 mb-3">
@@ -289,15 +297,16 @@ include '../auth/config.php';
                           />
                         </div>
                         <div class="col-md-6 mb-3">
-                          <label for="gambar" class="form-label">URL Gambar</label>
+                          <label for="gambar" class="form-label">Gambar</label>
                           <input
-                            type="text"
+                            type="file"
                             class="form-control"
                             id="gambar"
                             name="gambar"
-                            placeholder="Masukkan URL gambar"
+                            accept="image/*"
                             required
                           />
+                          <small class="text-muted">Format yang diizinkan: JPG, JPEG, PNG. Max: 2MB</small>
                         </div>
                       </div>
                       <div class="mb-3">
@@ -337,7 +346,7 @@ include '../auth/config.php';
                       aria-label="Close"
                     ></button>
                   </div>
-                  <form action="process/armada_process.php" method="post" id="editArmadaForm">
+                  <form action="process/armada_process.php" method="post" id="editArmadaForm" enctype="multipart/form-data">
                     <div class="modal-body" id="editArmadaBody">
                       <!-- Form fields will be loaded dynamically -->
                     </div>

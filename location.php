@@ -1,6 +1,5 @@
 <?php 
 require 'auth/config.php';
-$data_location = mysqli_query($conn, "SELECT * FROM lokasi_pengambilan")
 ?>
 
 <!DOCTYPE html>
@@ -15,16 +14,13 @@ $data_location = mysqli_query($conn, "SELECT * FROM lokasi_pengambilan")
     <div class="min-h-screen bg-gradient-to-b from-[#1A1F2C] to-[#2E2A4A] text-white">
         <!-- Header/Navbar -->
         <?php include 'components/navbar.php'; ?>
-        <?php foreach ($data_location as $key => $value) {
-          echo var_dump($data_location);
-        }?>
 
         <!-- Location Hero Section -->
         <section class="py-12 md:py-20 relative">
           <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-              <h1 class="text-4xl md:text-6xl font-bold leading-tight">Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Locations</span></h1>
-              <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto">Find DriveEasy rental offices across the country, ready to serve your transportation needs.</p>
+              <h1 class="text-4xl md:text-6xl font-bold leading-tight">Lokasi <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Kami</span></h1>
+              <p class="text-lg md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto">Temukan lokasi penyewaan mobil Anda di seluruh Indonesia</p>
             </div>
           </div>
           
@@ -44,13 +40,13 @@ $data_location = mysqli_query($conn, "SELECT * FROM lokasi_pengambilan")
               <!-- Location Card 1 -->
               <div class="bg-gray-800 bg-opacity-50 rounded-lg overflow-hidden border border-gray-700 hover:border-purple-500 transition-colors">
                 <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Jakarta Downtown</h3>
+                  <h3 class="text-xl font-bold mb-2">Jakarta Pusat</h3>
                   <div class="flex items-start mb-4">
                     <svg class="w-5 h-5 text-purple-400 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
-                    <p class="text-gray-300">Jl. Sudirman No. 123<br>Jakarta Pusat, 10220</p>
+                    <p class="text-gray-300">Jl. Kemayoran Baru No. 123<br>Jakarta Pusat, 10220</p>
                   </div>
                   <div class="flex items-start mb-4">
                     <svg class="w-5 h-5 text-purple-400 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +58,7 @@ $data_location = mysqli_query($conn, "SELECT * FROM lokasi_pengambilan")
                     <svg class="w-5 h-5 text-purple-400 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <p class="text-gray-300">Mon-Fri: 8AM-8PM<br>Sat-Sun: 9AM-6PM</p>
+                    <p class="text-gray-300">Sen-Jum: 8AM-8PM<br>Sab-Ming: 9AM-6PM</p>
                   </div>
                   <a href="#" class="block w-full py-3 text-center bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg hover:opacity-90 transition-opacity font-medium">Get Directions</a>
                 </div>
@@ -71,13 +67,13 @@ $data_location = mysqli_query($conn, "SELECT * FROM lokasi_pengambilan")
               <!-- Location Card 2 -->
               <div class="bg-gray-800 bg-opacity-50 rounded-lg overflow-hidden border border-gray-700 hover:border-purple-500 transition-colors">
                 <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Bandung City Center</h3>
+                  <h3 class="text-xl font-bold mb-2">Depok, Cimanggis</h3>
                   <div class="flex items-start mb-4">
                     <svg class="w-5 h-5 text-purple-400 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
-                    <p class="text-gray-300">Jl. Asia Afrika No. 45<br>Bandung, 40112</p>
+                    <p class="text-gray-300">Jl. Rambutan No. 45<br>Depok, 40112</p>
                   </div>
                   <div class="flex items-start mb-4">
                     <svg class="w-5 h-5 text-purple-400 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +85,7 @@ $data_location = mysqli_query($conn, "SELECT * FROM lokasi_pengambilan")
                     <svg class="w-5 h-5 text-purple-400 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <p class="text-gray-300">Mon-Fri: 8AM-8PM<br>Sat-Sun: 9AM-6PM</p>
+                    <p class="text-gray-300">Sen-Jum: 8AM-8PM<br>Sab-Min: 9AM-6PM</p>
                   </div>
                   <a href="#" class="block w-full py-3 text-center bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg hover:opacity-90 transition-opacity font-medium">Get Directions</a>
                 </div>
@@ -98,13 +94,13 @@ $data_location = mysqli_query($conn, "SELECT * FROM lokasi_pengambilan")
               <!-- Location Card 3 -->
               <div class="bg-gray-800 bg-opacity-50 rounded-lg overflow-hidden border border-gray-700 hover:border-purple-500 transition-colors">
                 <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Surabaya Branch</h3>
+                  <h3 class="text-xl font-bold mb-2">Bogor, Cibanteng</h3>
                   <div class="flex items-start mb-4">
                     <svg class="w-5 h-5 text-purple-400 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
-                    <p class="text-gray-300">Jl. Pemuda No. 78<br>Surabaya, 60271</p>
+                    <p class="text-gray-300">Jl. Sumeru No. 78<br>Bogor, 60271</p>
                   </div>
                   <div class="flex items-start mb-4">
                     <svg class="w-5 h-5 text-purple-400 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -116,7 +112,7 @@ $data_location = mysqli_query($conn, "SELECT * FROM lokasi_pengambilan")
                     <svg class="w-5 h-5 text-purple-400 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <p class="text-gray-300">Mon-Fri: 8AM-8PM<br>Sat-Sun: 9AM-6PM</p>
+                    <p class="text-gray-300">Sen-Jum: 8AM-8PM<br>Sab-Min: 9AM-6PM</p>
                   </div>
                   <a href="#" class="block w-full py-3 text-center bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg hover:opacity-90 transition-opacity font-medium">Get Directions</a>
                 </div>
@@ -143,7 +139,7 @@ $data_location = mysqli_query($conn, "SELECT * FROM lokasi_pengambilan")
                     <svg class="w-5 h-5 text-purple-400 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <p class="text-gray-300">Mon-Sun: 7AM-10PM<br>Open Daily</p>
+                    <p class="text-gray-300">Sen-Jum: 7AM-10PM<br>Open Daily</p>
                   </div>
                   <a href="#" class="block w-full py-3 text-center bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg hover:opacity-90 transition-opacity font-medium">Get Directions</a>
                 </div>
@@ -152,13 +148,13 @@ $data_location = mysqli_query($conn, "SELECT * FROM lokasi_pengambilan")
               <!-- Location Card 5 -->
               <div class="bg-gray-800 bg-opacity-50 rounded-lg overflow-hidden border border-gray-700 hover:border-purple-500 transition-colors">
                 <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">Yogyakarta</h3>
+                  <h3 class="text-xl font-bold mb-2">Bekasi, Tambun</h3>
                   <div class="flex items-start mb-4">
                     <svg class="w-5 h-5 text-purple-400 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
-                    <p class="text-gray-300">Jl. Malioboro No. 56<br>Yogyakarta, 55213</p>
+                    <p class="text-gray-300">Jl. Cingkaret No. 56<br>Bekasi, 55213</p>
                   </div>
                   <div class="flex items-start mb-4">
                     <svg class="w-5 h-5 text-purple-400 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -170,7 +166,7 @@ $data_location = mysqli_query($conn, "SELECT * FROM lokasi_pengambilan")
                     <svg class="w-5 h-5 text-purple-400 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <p class="text-gray-300">Mon-Fri: 8AM-8PM<br>Sat-Sun: 9AM-6PM</p>
+                    <p class="text-gray-300">Mon-Fri: 8AM-8PM<br>Sab-Min: 9AM-6PM</p>
                   </div>
                   <a href="#" class="block w-full py-3 text-center bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg hover:opacity-90 transition-opacity font-medium">Get Directions</a>
                 </div>

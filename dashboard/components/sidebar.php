@@ -70,7 +70,7 @@
             <!-- Dashboard -->
              <?php $current_page = basename($_SERVER['PHP_SELF'])?>
             <li class="menu-item <?= $current_page == 'index.php' ? 'active' : '' ?>">
-              <a href="index.html" class="menu-link">
+              <a href="index.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
