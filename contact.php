@@ -293,14 +293,7 @@
         </footer>
 
         <!-- Mobile Menu Toggle Script -->
-        <script>
-          const mobileMenuButton = document.getElementById('mobile-menu-button');
-          const mobileMenu = document.getElementById('mobile-menu');
-          
-          mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-          });
-        </script>
+        <script src="script.js"></script>
     </div>
 </body>
 </html>
