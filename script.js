@@ -1,5 +1,5 @@
 // Navbar scroll effect
-const header = document.querySelector('header');
+const header = document.getElementById('header');
 
 if (header) {
   // Add transparent class initially
