@@ -188,7 +188,7 @@
         </div>
 
         <div class="text-center mt-12">
-          <a href="#" class="px-8 py-3 border border-purple-400 rounded-lg font-medium hover:bg-purple-400 hover:text-gray-900 transition-colors inline-block">Lihat Semua Kendaraan</a>
+          <a href="vehicles.php" class="px-8 py-3 border border-purple-400 rounded-lg font-medium hover:bg-purple-400 hover:text-gray-900 transition-colors inline-block">Lihat Semua Kendaraan</a>
         </div>
       </div>
     </section>

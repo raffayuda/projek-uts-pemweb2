@@ -3,7 +3,7 @@ session_start();
 $isLoggedIn = isset($_SESSION['user_id'])
 ?>
 
-<header class="fixed w-full z-50" id="header">
+<header class="fixed w-full z-50 bg-[#1A1F2C]" id="header">
   <nav class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
       <div class="flex items-center">
@@ -16,7 +16,7 @@ $isLoggedIn = isset($_SESSION['user_id'])
       ?>
       <div class="hidden lg:flex space-x-8">
         <a href="index.php" class="hover:text-purple-300 transition-colors <?= ($current_page == 'index.php') ? 'text-purple-500 font-bold' : '' ?>">Home</a>
-        <a href="#vehicles" class="hover:text-purple-300 transition-colors ">Vehicles</a>
+        <a href="vehicles.php" class="hover:text-purple-300 transition-colors <?= ($current_page == 'vehicles.php') ? 'text-purple-500 font-bold' : '' ?>">Vehicles</a>
         <a href="location.php" class="hover:text-purple-300 transition-colors <?= ($current_page == 'location.php') ? 'text-purple-500 font-bold' : '' ?>">Locations</a>
         <a href="about.php" class="hover:text-purple-300 transition-colors <?= ($current_page == 'about.php') ? 'text-purple-500 font-bold' : '' ?>">About Us</a>
         <a href="contact.php" class="hover:text-purple-300 transition-colors <?= ($current_page == 'contact.php') ? 'text-purple-500 font-bold' : '' ?>">Contact</a>
@@ -51,7 +51,7 @@ $isLoggedIn = isset($_SESSION['user_id'])
     <div id="mobile-menu" class="lg:hidden hidden mt-4 bg-gray-800 bg-opacity-90 rounded-lg p-4">
       <div class="flex flex-col space-y-4">
         <a href="index.php" class="hover:text-purple-300 transition-colors <?= ($current_page == 'index.php') ? 'text-purple-500 font-bold' : '' ?>">Home</a>
-        <a href="#vehicles" class="hover:text-purple-300 transition-colors">Vehicles</a>
+        <a href="vehicles.php" class="hover:text-purple-300 transition-colors <?= ($current_page == 'vehicles.php') ? 'text-purple-500 font-bold' : '' ?>">Vehicles</a>
         <a href="location.php" class="hover:text-purple-300 transition-colors <?= ($current_page == 'location.php') ? 'text-purple-500 font-bold' : '' ?>">Locations</a>
         <a href="about.php" class="hover:text-purple-300 transition-colors <?= ($current_page == 'about.php') ? 'text-purple-500 font-bold' : '' ?>">About Us</a>
         <a href="contact.php" class="hover:text-purple-300 transition-colors <?= ($current_page == 'contact.php') ? 'text-purple-500 font-bold' : '' ?>">Contact</a>
