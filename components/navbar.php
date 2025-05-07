@@ -7,7 +7,7 @@ $isLoggedIn = isset($_SESSION['user_id'])
   <nav class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
       <div class="flex items-center">
-        <span class="text-2xl font-bold">DriveEasy</span>
+        <span class="text-2xl font-bold"><img src="logo.png" alt="" width="100" height="100"></span>
       </div>
 
       <!-- {/* Desktop Navigation */} -->
@@ -40,9 +40,7 @@ $isLoggedIn = isset($_SESSION['user_id'])
       <!-- {/* Mobile menu button */} -->
       <div class="lg:hidden">
         <button id="mobile-menu-button" class="text-white focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
+        <img src="logo.png" alt="" width="100" height="100">
         </button>
       </div>
     </div>

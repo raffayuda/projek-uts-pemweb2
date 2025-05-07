@@ -28,8 +28,8 @@
               <a href="#" class="px-8 py-3 border border-purple-400 rounded-lg text-center font-medium hover:bg-purple-400 hover:text-gray-900 transition-colors">Lihat Armada</a>
             </div>
           </div>
-          <div class="rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-            <img src="https://www.assarent.co.id/upload/image/home_1.png" alt="Mobil Premium" class="w-full h-auto" />
+          <div class="rounded-lg shadow-2xl ">
+            <img src="https://www.assarent.co.id/upload/image/home_1.png" alt="Mobil Premium" class="w-full h-auto transform hover:scale-105 transition-transform duration-300" />
           </div>
         </div>
       </div>

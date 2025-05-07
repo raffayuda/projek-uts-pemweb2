@@ -35,10 +35,15 @@
                     class="w-full p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50">
             </div>
 
-            <button type="submit"
-                class="w-full py-3 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg hover:opacity-90 transition-opacity">
-                Register
-            </button>
+            <div class="mb-4 flex justify-between gap-4">
+                <button type="submit"
+                    class="w-full py-3 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg hover:opacity-90 transition-opacity">
+                    Register
+                </button>
+                <a href="../index.php" class="px-4 text-center flex items-center justify-center py-2 bg-gray-700 bg-opacity-50 rounded-lg hover:bg-gray-600 w-full transition-colors text-white font-medium">
+                    Kembali
+                </a>
+            </div>
         </form>
 
         <p class="text-gray-300 text-center mt-4">
