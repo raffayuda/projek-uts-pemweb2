@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Insert new user
-    $sql = "INSERT INTO user (name, email, password, role_id) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO user (nama, email, password, role_id) VALUES (?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sssi", $name, $email, $password, $role_id);
 

@@ -21,7 +21,7 @@
       <div class="container mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="space-y-6">
-            <h1 class="text-4xl md:text-6xl font-bold leading-tight">Wujudkan Perjalanan Impian Anda <?= $isLoggedIn ?  "<button>tes</button>" :  '' ?><span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Sekarang</span></h1>
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight">Wujudkan Perjalanan Impian Anda <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Sekarang</span></h1>
             <p class="text-lg md:text-xl text-gray-300">Nikmati pengalaman sewa mobil premium dengan pemesanan yang mudah dan layanan luar biasa. Perjalanan Anda dimulai di sini.</p>
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a href="#booking-section" class="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg text-center font-medium hover:opacity-90 transition-opacity">Pesan Sekarang</a>

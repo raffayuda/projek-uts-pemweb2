@@ -50,7 +50,8 @@ function upload_ktp($file) {
     
     // Upload file
     if (move_uploaded_file($file["tmp_name"], $target_file)) {
-        return ["status" => true, "file_path" => $target_file];
+        // Hanya mengembalikan nama file, bukan path lengkap
+        return ["status" => true, "file_name" => $file_name];
     } else {
         return ["status" => false, "message" => "Gagal mengupload file."];
     }
@@ -81,7 +82,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
             exit();
         }
         
-        $ktp_peminjam = $upload_result['file_path'];
+        // Hanya simpan nama file di database
+        $ktp_peminjam = $upload_result['file_name'];
     } else {
         header("Location: ../peminjaman.php?status=error&message=KTP peminjam wajib diupload.");
         exit();
@@ -125,7 +127,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
             exit();
         }
         
-        $ktp_peminjam = $upload_result['file_path'];
+        // Hanya simpan nama file di database
+        $ktp_peminjam = $upload_result['file_name'];
     } else {
         // Gunakan KTP lama jika tidak ada upload baru
         $ktp_peminjam = $old_ktp;
@@ -200,6 +203,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['action']) && $_GET['acti
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
+        
+        // Jika perlu menampilkan path lengkap untuk ditampilkan di frontend
+        if (isset($row['ktp_peminjam']) && !empty($row['ktp_peminjam'])) {
+            $row['ktp_peminjam_url'] = "../../uploads/ktp/" . $row['ktp_peminjam'];
+        }
+        
         header('Content-Type: application/json');
         echo json_encode($row);
     } else {

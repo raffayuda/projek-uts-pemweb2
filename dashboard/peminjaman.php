@@ -877,7 +877,7 @@ include '../auth/config.php';
             
             // Tampilkan preview KTP jika ada
             if (data.ktp_peminjam) {
-              $('#ktp_preview').attr('src', "../" + data.ktp_peminjam);
+              $('#ktp_preview').attr('src', "../uploads/ktp/" + data.ktp_peminjam);
               $('#ktp_preview_container').show();
             } else {
               $('#ktp_preview_container').hide();
@@ -944,7 +944,7 @@ include '../auth/config.php';
             
             // Tampilkan KTP jika ada
             if (data.ktp_peminjam) {
-              $('#detail_ktp_peminjam').attr('src',"../" + data.ktp_peminjam).show();
+              $('#detail_ktp_peminjam').attr('src',"../uploads/ktp/" + data.ktp_peminjam).show();
             } else {
               $('#detail_ktp_peminjam').hide();
             }

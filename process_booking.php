@@ -50,11 +50,14 @@ if (isset($_FILES['ktp_image']) && $_FILES['ktp_image']['error'] === UPLOAD_ERR_
     if (!file_exists($upload_dir)) {
         mkdir($upload_dir, 0777, true);
     }
+    
+    // Generate file name with timestamp to avoid duplicates
     $file_name = time() . '_' . basename($_FILES['ktp_image']['name']);
     $upload_path = $upload_dir . $file_name;
 
     if (move_uploaded_file($_FILES['ktp_image']['tmp_name'], $upload_path)) {
-        $ktp_peminjam = $upload_path;
+        // Simpan hanya nama file, bukan path lengkap
+        $ktp_peminjam = $file_name;
     } else {
         $errors[] = "Gagal mengunggah gambar KTP";
     }
