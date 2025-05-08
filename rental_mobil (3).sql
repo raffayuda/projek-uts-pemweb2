@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Bulan Mei 2025 pada 11.06
+-- Waktu pembuatan: 07 Bulan Mei 2025 pada 11.40
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -45,12 +45,12 @@ CREATE TABLE `armada` (
 --
 
 INSERT INTO `armada` (`id`, `merk`, `nopol`, `thn_beli`, `deskripsi`, `jenis_kendaraan_id`, `kapasitas_kursi`, `rating`, `harga`, `gambar`) VALUES
-(1, 'Tesla Model S', 'B 1234 EV', 2023, 'Electric • Auto • Range 300 mi', 1, 5, 5, 5000000, 'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'),
-(2, 'Toyota Prius', 'B 5678 HB', 2022, 'Hybrid • Auto • MPG 54', 2, 5, 5, 1200000, 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'),
-(3, 'Porsche 911', 'B 911 SP', 2023, 'Gas • Manual • 0-60 in 3.2s', 3, 2, 5, 2000000, 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'),
-(4, 'Mercedes-Benz GLC', 'B 4321 MB', 2022, 'Gas • Auto • Luxury SUV', 4, 5, 4, 3000000, 'https://images.unsplash.com/photo-1653245620594-02e1d9a188f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'),
-(5, 'BMW i4', 'B 8765 BM', 2023, 'Electric • Auto • Range 270 mi', 1, 5, 4, 4000000, 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'),
-(6, 'Honda Civic', 'B 2468 HC', 2021, 'Gas • Auto • MPG 36', 2, 5, 4, 1000000, 'https://images.unsplash.com/photo-1590362891991-f776e747a588?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+(1, 'Tesla Model S', 'B 1234 EV', 2023, 'Electric • Auto • Range 300 mi', 1, 5, 5, 5000000, '1746248459_tesla.png'),
+(2, 'Toyota Prius', 'B 5678 HB', 2022, 'Hybrid • Auto • MPG 54', 2, 5, 5, 1200000, '1746248473_toyota.png'),
+(3, 'Porsche 911', 'B 911 SP', 2023, 'Gas • Manual • 0-60 in 3.2s', 3, 2, 5, 2000000, '1746248719_prosche.png'),
+(4, 'Mercedes-Benz GLC', 'B 4321 MB', 2022, 'Gas • Auto • Luxury SUV', 4, 5, 4, 3000000, '1746248732_mercedes.png'),
+(5, 'BMW i4', 'B 8765 BM', 2023, 'Electric • Auto • Range 270 mi', 1, 5, 4, 4000000, '1746248742_bmw.png'),
+(6, 'Honda Civic', 'B 2468 HC', 2021, 'Gas • Auto • MPG 36', 2, 5, 4, 1000000, '1746248759_civic.png');
 
 -- --------------------------------------------------------
 
@@ -89,10 +89,10 @@ CREATE TABLE `lokasi_pengambilan` (
 --
 
 INSERT INTO `lokasi_pengambilan` (`id`, `nama`) VALUES
-(1, 'Downtown Office'),
-(2, 'Airport Terminal'),
-(3, 'North Branch'),
-(4, 'South Branch');
+(1, 'Jakarta Pusat, Kemayoran'),
+(2, 'Depok, Cimanggis'),
+(3, 'Bogor, Cibanteng'),
+(4, 'Bekasi, Tambun');
 
 -- --------------------------------------------------------
 
@@ -110,10 +110,10 @@ CREATE TABLE `lokasi_pengembalian` (
 --
 
 INSERT INTO `lokasi_pengembalian` (`id`, `nama`) VALUES
-(1, 'Downtown Office'),
-(2, 'Airport Terminal'),
-(3, 'North Branch'),
-(4, 'South Branch');
+(1, 'Jakarta Pusat, Kemayoran'),
+(2, 'Depok, Cimanggis'),
+(3, 'Bogor, Cibanteng'),
+(4, 'Bekasi, Tambun');
 
 -- --------------------------------------------------------
 
@@ -139,7 +139,7 @@ CREATE TABLE `pembayaran` (
 --
 
 INSERT INTO `pembayaran` (`id`, `tanggal`, `jumlah_bayar`, `peminjaman_id`, `status_pembayaran`, `metode_pembayaran`, `keterangan`, `created_by`, `created_at`, `updated_at`) VALUES
-(1, '2025-04-29', 3000000, 1, 'Lunas', NULL, NULL, NULL, '2025-04-29 12:39:22', '2025-04-29 12:39:22');
+(2, '2025-05-05', 9000000, 6, 'Lunas', NULL, NULL, NULL, '2025-05-05 09:32:44', '2025-05-05 09:32:44');
 
 -- --------------------------------------------------------
 
@@ -172,11 +172,78 @@ CREATE TABLE `peminjaman` (
 --
 
 INSERT INTO `peminjaman` (`id`, `nama_peminjam`, `ktp_peminjam`, `keperluan_pinjam`, `mulai`, `selesai`, `biaya`, `armada_id`, `komentar_peminjam`, `status_pinjam`, `pengembalian_id`, `pengambilan_id`, `waktu_pengambilan`, `waktu_pengembalian`, `phone`, `created_at`, `updated_at`) VALUES
-(1, 'Raffa Yuda', 'uploads/ktp/1745928441_Screenshot 2025-01-06 165952.png', 'Wedding', '2025-04-29', '2025-05-01', 3000000, 6, 'n', 'Dibooking', 2, 1, '19:10:00', '21:06:00', '+628889623663', '2025-04-29 12:07:21', '2025-04-29 12:07:21');
+(6, 'Raffa Yuda', 'uploads/ktp/1746415738_images.jpeg', 'Liburan', '2025-05-05', '2025-05-07', 9000000, 4, 'AAAHHHHHH', 'Dibooking', 2, 1, '10:30:00', '12:28:00', '+628889623663', '2025-05-05 03:28:58', '2025-05-05 03:28:58');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `role_user`
+--
+
+CREATE TABLE `role_user` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `role_user`
+--
+
+INSERT INTO `role_user` (`id`, `nama`) VALUES
+(1, 'admin'),
+(2, 'user');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `role_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `user`
+--
+
+INSERT INTO `user` (`id`, `nama`, `email`, `password`, `role_id`) VALUES
+(1, 'raffa', 'raffa@gmail.com', '$2y$10$6LclnNvsx9t8SXY2Sqf52O36ThZMAhmRHtJeu8aqZlzBDTNvW/dC.', 2),
+(2, 'admin', 'admin@gmail.com', '$2y$10$iIu.fRgFbPyR3XCoZTPhe.vfoAhphBMgfOSGCopL6KdL0MBmMQOMy', 1),
+(3, 'test', 'test@gmail.com', '$2y$10$Iud2.WHtV0iaICdrdBiMFeXzuRvofFWBSs4XMmaRkA.9I8oeKS1DK', 2);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `armada`
+--
+ALTER TABLE `armada`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `jenis_kendaraan_id` (`jenis_kendaraan_id`);
+
+--
+-- Indeks untuk tabel `jenis_kendaraan`
+--
+ALTER TABLE `jenis_kendaraan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `lokasi_pengambilan`
+--
+ALTER TABLE `lokasi_pengambilan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `lokasi_pengembalian`
+--
+ALTER TABLE `lokasi_pengembalian`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `pembayaran`
@@ -193,30 +260,97 @@ ALTER TABLE `peminjaman`
   ADD KEY `fk_peminjaman_armada` (`armada_id`);
 
 --
+-- Indeks untuk tabel `role_user`
+--
+ALTER TABLE `role_user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `role_id` (`role_id`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `armada`
+--
+ALTER TABLE `armada`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT untuk tabel `jenis_kendaraan`
+--
+ALTER TABLE `jenis_kendaraan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT untuk tabel `lokasi_pengambilan`
+--
+ALTER TABLE `lokasi_pengambilan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT untuk tabel `lokasi_pengembalian`
+--
+ALTER TABLE `lokasi_pengembalian`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `pembayaran`
 --
 ALTER TABLE `pembayaran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT untuk tabel `role_user`
+--
+ALTER TABLE `role_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
+-- Ketidakleluasaan untuk tabel `armada`
+--
+ALTER TABLE `armada`
+  ADD CONSTRAINT `armada_ibfk_1` FOREIGN KEY (`jenis_kendaraan_id`) REFERENCES `jenis_kendaraan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Ketidakleluasaan untuk tabel `pembayaran`
 --
 ALTER TABLE `pembayaran`
   ADD CONSTRAINT `fk_pembayaran_peminjaman` FOREIGN KEY (`peminjaman_id`) REFERENCES `peminjaman` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `peminjaman`
+--
+ALTER TABLE `peminjaman`
+  ADD CONSTRAINT `peminjaman_ibfk_1` FOREIGN KEY (`armada_id`) REFERENCES `armada` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `role_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
